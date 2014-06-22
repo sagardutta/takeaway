@@ -8,7 +8,9 @@ class Course {
 
     static hasMany= [sessions:Session]
 
-
+    static mapping = {
+        sessions sort:'date', order:'asc'
+    }
     String name
     String professor
 

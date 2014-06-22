@@ -10,9 +10,13 @@ class Session {
     Course course
     Date date
 
+    static mapping = {
+        notes sort:'date', order:'asc'
+    }
+
     @Override
     public String toString() {
-        return date;
+        return date.format('dd-MMM-yy');
     }
 }
 

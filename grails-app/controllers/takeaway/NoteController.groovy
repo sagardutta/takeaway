@@ -27,7 +27,7 @@ class NoteController {
         }
 
         flash.message = message(code: 'default.created.message', args: [message(code: 'note.label', default: 'Note'), noteInstance.id])
-        redirect(action: "show", id: noteInstance.id)
+        redirect(controller: "session", action: "show", id: noteInstance.session.id)
     }
 
     def show(Long id) {

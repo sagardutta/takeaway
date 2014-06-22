@@ -10,6 +10,7 @@ class Note {
     Course course
     Session session
     User user
+    Date date = new Date();
 
     @Override
     public String toString() {

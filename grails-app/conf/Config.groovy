@@ -70,7 +70,7 @@ environments {
 }
 
 // log4j configuration
-log4j = {
+/*log4j = {
     // Example of changing the log pattern for the default console appender:
     //
     //appenders {
@@ -88,4 +88,20 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
-}
+}  */
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'org.takeaway.SecUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'org.takeaway.SecUserSecRole'
+grails.plugin.springsecurity.authority.className = 'org.takeaway.SecRole'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+
