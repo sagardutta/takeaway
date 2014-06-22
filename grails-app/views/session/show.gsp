@@ -40,7 +40,7 @@
                <div class="row marketing">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="input-group input-group-lg">
-                        <form action="/takeaway/note/save" class="input-group input-group-lg" method="post">
+                        <form action="/note/save" class="input-group input-group-lg" method="post">
                             <input type="hidden"  name="course.id"  value="${sessionInstance?.course?.id}" />
                             <input type="hidden"  name="session.id"  value="${sessionInstance?.id}" />
                             <input type="hidden"  name="user.id"  value="1" />
